@@ -1,0 +1,60 @@
+body{
+    background: rgb(255,156,0);
+    background: radial-gradient(circle, rgba(255,156,0,1) 30%, rgba(255,255,255,1) 100%); 
+}
+
+@media (min-width: 768px){
+  #outer-wrapper, #inner-wrapper{
+	padding-top: 20px;
+	padding-left: 50px;
+	}
+}
+
+
+/*FRONTEND EDITTING STYLES*/
+
+.editable {
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	-moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05);
+
+
+}
+.editable .action{
+	-moz-transition: 0.4s;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	background-color: #ff513f;
+	cursor: pointer;
+	color: #fff;
+	height: 30px;
+	right: 0px;
+	width: 60px;
+	position: absolute;
+	top: 20px;
+	z-index: 4;
+}
+
+.editable .action i {
+  text-align: center;
+  font-size: 18px;
+  line-height: 28px;
+  margin-right: 10px;
+  display: block;
+}
+
+.editable:hover, .editable:focus{
+	background-color: #fff;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+	opacity: 0.95;
+	border: 3px #ff513f solid;
+}
+.editable:hover .action, .editable:focus .action{
+	filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+	opacity: 1;	
+}
